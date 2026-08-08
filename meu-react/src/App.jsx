@@ -1,10 +1,11 @@
 import React from "react";
-import Welcome from "./componentes/welcome";
+import Welcome from "./components/aula1/welcome";
 
 function App() {
   return (
     <div>
       <Welcome name="Arthur" />
+      <Contador />
     </div>
   );
 }
