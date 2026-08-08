@@ -1,10 +1,10 @@
 import React from "react";
-import Pai from "./components/aula3/ex02";
+import ListaDeProdutos from "./components/aula4/ListaDeProdutos";
 
 function App() {
   return (
     <div>
-      <Pai />
+      <ListaDeProdutos />
     </div>
   );
 }
