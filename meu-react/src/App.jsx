@@ -1,12 +1,10 @@
 import React from "react";
-import Welcome from "./components/aula1/welcome";
-import PlacarDoJogo from "./components/aula2/PlacarDoJogo";
-import ExemploPlacarJogo from "./components/aula2/exemploPlacar";
+import Pai from "./components/aula3/ex02";
 
 function App() {
   return (
     <div>
-      <ExemploPlacarJogo />
+      <Pai />
     </div>
   );
 }
