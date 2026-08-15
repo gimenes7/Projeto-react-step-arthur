@@ -1,10 +1,12 @@
 import React from "react";
-import Welcome from "./componentes/welcome";
+import PlacarDoJogo from "./components/PlacarDoJogo";
+import ExemploPlacarJogo from "./components/exemploPlacar";
+import Relogio from "./components/dever de casa/ex1";
 
 function App() {
   return (
     <div>
-      <Welcome name="Arthur" />
+      <Relogio />
     </div>
   );
 }
