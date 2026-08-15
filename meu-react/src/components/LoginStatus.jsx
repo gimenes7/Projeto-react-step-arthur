@@ -1,17 +1,13 @@
-import { useState } from "react";
-import LoginStatus from "./LoginStatus";
-
-function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+const LoginStatus = ({ isLoggedIn }) => {
   return (
     <div>
-      <LoginStatus isLoggedIn={isLoggedIn} />
-      <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
-        {isLoggedIn ? "Logout" : "Login"}
-      </button>
+      {isLoggedIn ? (
+        <h1>Bem-vindo de volta!</h1>
+      ) : (
+        <h1>Por favor, faça login.</h1>
+      )}
     </div>
   );
-}
+};
 
-export default App;
+export default LoginStatus;

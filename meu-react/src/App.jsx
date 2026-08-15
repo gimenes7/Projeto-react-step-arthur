@@ -1,6 +1,6 @@
 import { useState } from "react";
-import LoginStatus from "./LoginStatus";
-import Notification from "./Notification";
+import LoginStatus from "./components/LoginStatus";
+import Notification from "./components/Notification";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
