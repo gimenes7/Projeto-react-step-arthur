@@ -1,12 +1,21 @@
-import React from "react";
-import PlacarDoJogo from "./components/PlacarDoJogo";
-import ExemploPlacarJogo from "./components/exemploPlacar";
-import Relogio from "./components/dever de casa/ex1";
+import { useState } from "react";
+import LoginStatus from "./components/LoginStatus";
+import Notification from "./components/Notification";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [showNotif, setShowNotif] = useState(false);
+
   return (
     <div>
-      <Relogio />
+      <LoginStatus isLoggedIn={isLoggedIn} />
+      <Notification showNotification={showNotif} />
+      <button onClick={() => setIsLoggedIn(!isLoggedIn)}>
+        {isLoggedIn ? "Logout" : "Login"}
+      </button>
+      <button onClick={() => setShowNotif(!showNotif)}>
+        {showNotif ? "Ocultar" : "Mostrar"} Notificação
+      </button>
     </div>
   );
 }
