@@ -1,20 +1,20 @@
-import ButtonCSS from "./components/ButtonCSS.jsx";
-import ButtonInline from "./components/ButtonInline.jsx";
-import ButtonStyled from "./components/ButtonStyled.jsx";
+import ButtonModules from "./components/ButtonModules";
+import ButtonTailwind from "./components/ButtonTailwind";
+import ButtonMUI from "./components/ButtonMUI";
 
 function App() {
   return (
     <div>
-      <h1>Botão com CSS Externo</h1>
-      <ButtonCSS label="CSS Externo" />
+      <h1>Botão com CSS Modules</h1>
+      <ButtonModules label="CSS Modules" />
 
-      <h1>Botão com Inline Styles</h1>
-      <ButtonInline label="Primário" primary />
-      <ButtonInline label="Secundário" />
+      <h1>Botão com Tailwind CSS</h1>
+      <ButtonTailwind label="Primário" primary />
+      <ButtonTailwind label="Secundário" />
 
-      <h1>Botão com Styled Components</h1>
-      <ButtonStyled label="Primário" primary />
-      <ButtonStyled label="Secundário" />
+      <h1>Botão com Material-UI</h1>
+      <ButtonMUI label="Primary" primary />
+      <ButtonMUI label="Secondary" />
     </div>
   );
 }
