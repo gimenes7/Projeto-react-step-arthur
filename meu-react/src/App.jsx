@@ -1,9 +1,20 @@
-import ListaFiltrada from "./components/aula4/ListaFiltrada";
+import ButtonModules from "./components/ButtonModules";
+import ButtonTailwind from "./components/ButtonTailwind";
+import ButtonMUI from "./components/ButtonMUI";
 
 function App() {
   return (
     <div>
-      <ListaFiltrada />
+      <h1>Botão com CSS Modules</h1>
+      <ButtonModules label="CSS Modules" />
+
+      <h1>Botão com Tailwind CSS</h1>
+      <ButtonTailwind label="Primário" primary />
+      <ButtonTailwind label="Secundário" />
+
+      <h1>Botão com Material-UI</h1>
+      <ButtonMUI label="Primary" primary />
+      <ButtonMUI label="Secondary" />
     </div>
   );
 }
