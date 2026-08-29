@@ -1,22 +1,14 @@
-import ButtonModules from "./components/ButtonModules";
-import ButtonTailwind from "./components/ButtonTailwind";
-import ButtonMUI from "./components/ButtonMUI";
-
+import Usuarios from "./components/Usuarios";
+import Posts from "./components/Posts";
+import ListaUsuarios from "./components/ListaUsuarios";
 function App() {
   return (
     <div>
-      <h1>Botão com CSS Modules</h1>
-      <ButtonModules label="CSS Modules" />
-
-      <h1>Botão com Tailwind CSS</h1>
-      <ButtonTailwind label="Primário" primary />
-      <ButtonTailwind label="Secundário" />
-
-      <h1>Botão com Material-UI</h1>
-      <ButtonMUI label="Primary" primary />
-      <ButtonMUI label="Secondary" />
+      <h1>JSONPlaceholder App</h1>
+      <Usuarios />
+      <Posts />
+      <ListaUsuarios />
     </div>
   );
 }
-
 export default App;
