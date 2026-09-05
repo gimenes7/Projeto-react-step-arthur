@@ -1,22 +1,22 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import CriarProduto from "./components/aulas-integradas/CriarProduto";
-import EditarProduto from "./components/aulas-integradas/EditarProduto";
-import Login from "./components/aulas-integradas/Login";
-import Registrar from "./components/aulas-integradas/Registrar";
-import RootRoute from "./components/aulas-integradas/RootRoute";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/aula10/Home";
+import About from "./components/aula10/About";
+import Contact from "./components/aula10/Contact";
+import Navbar from "./components/aula10/Navbar";
+import Navbar2 from "./components/aula10/Navbar2";
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
+      <Navbar />
+      <Navbar2 />
       <Routes>
-        <Route path="/" element={<RootRoute />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/registrar" element={<Registrar />} />
-        <Route path="/criar-produto" element={<CriarProduto />} />
-        <Route path="/produto/:id" element={<EditarProduto />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default App;
