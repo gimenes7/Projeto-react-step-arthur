@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 
 const PRODUCTS_URL = "https://projeto-node-step-t5i1.vercel.app/produtos";
@@ -53,9 +53,20 @@ const Home = () => {
     }
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/");
+  };
+
   return (
     <main>
       <h1>Home</h1>
+      <button type="button" onClick={handleLogout}>
+        Sair
+      </button>
+      <Link to="/criar-produto">
+        <button type="button">Criar Produto</button>
+      </Link>
       {isLoading && <p>Carregando produtos...</p>}
       {error && <p role="alert">{error}</p>}
       {deleteError && <p role="alert">{deleteError}</p>}

@@ -1,12 +1,14 @@
 import axios from "axios";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./AuthForms.css";
 
 const REGISTER_URL = "https://projeto-node-step-t5i1.vercel.app/registrar";
 
 const Registrar = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: "",
+    nome: "",
     email: "",
     role: "",
     senha: "",
@@ -28,7 +30,12 @@ const Registrar = () => {
       const response = await axios.post(REGISTER_URL, formData);
       localStorage.setItem("token", response.data.token);
       setMessage("Cadastro realizado com sucesso.");
-    } catch {
+      navigate("/");
+    } catch (error) {
+      console.error(
+        "Erro ao registrar:",
+        error.response?.data || error.message,
+      );
       setMessage("Não foi possível realizar o cadastro.");
     } finally {
       setIsSubmitting(false);
@@ -43,9 +50,9 @@ const Registrar = () => {
           <label htmlFor="register-name">Nome:</label>
           <input
             id="register-name"
-            name="name"
+            name="nome"
             type="text"
-            value={formData.name}
+            value={formData.nome}
             onChange={handleChange}
             required
           />
@@ -92,6 +99,12 @@ const Registrar = () => {
         </button>
         {message && <p className="auth-message">{message}</p>}
       </form>
+      <p className="auth-message">
+        Já tem conta?{" "}
+        <Link to="/login" className="auth-link">
+          Entrar
+        </Link>
+      </p>
     </section>
   );
 };

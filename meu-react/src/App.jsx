@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CriarProduto from "./components/aulas-integradas/CriarProduto";
 import EditarProduto from "./components/aulas-integradas/EditarProduto";
-import Home from "./components/aulas-integradas/Home";
 import Login from "./components/aulas-integradas/Login";
 import Registrar from "./components/aulas-integradas/Registrar";
+import RootRoute from "./components/aulas-integradas/RootRoute";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<RootRoute />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registrar" element={<Registrar />} />
         <Route path="/criar-produto" element={<CriarProduto />} />

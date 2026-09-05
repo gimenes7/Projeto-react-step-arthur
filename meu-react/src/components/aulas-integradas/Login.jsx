@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./AuthForms.css";
 
 const LOGIN_URL = "https://projeto-node-step-t5i1.vercel.app/login";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     senha: "",
@@ -26,6 +28,7 @@ const Login = () => {
       const response = await axios.post(LOGIN_URL, formData);
       localStorage.setItem("token", response.data.token);
       setMessage("Login realizado com sucesso.");
+      navigate("/");
     } catch {
       setMessage("Não foi possível realizar o login.");
     } finally {
@@ -66,6 +69,12 @@ const Login = () => {
         </button>
         {message && <p className="auth-message">{message}</p>}
       </form>
+      <p className="auth-message">
+        Não tem conta?{" "}
+        <Link to="/registrar" className="auth-link">
+          Registre-se
+        </Link>
+      </p>
     </section>
   );
 };

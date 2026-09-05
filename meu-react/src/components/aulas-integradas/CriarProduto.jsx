@@ -1,10 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./AuthForms.css";
 
 const PRODUCTS_URL = "https://projeto-node-step-t5i1.vercel.app/produtos";
 
 const CriarProduto = () => {
+  const token = localStorage.getItem("token");
   const [formData, setFormData] = useState({
     nome: "",
     preco: "",
@@ -64,6 +66,26 @@ const CriarProduto = () => {
       setIsSubmitting(false);
     }
   };
+
+  if (!token) {
+    return (
+      <section className="auth-page">
+        <h1>Criar Produto</h1>
+        <p className="auth-message">
+          Você precisa estar logado para criar um produto.
+        </p>
+        <p className="auth-message">
+          <Link to="/login" className="auth-link">
+            Fazer login
+          </Link>{" "}
+          ou{" "}
+          <Link to="/registrar" className="auth-link">
+            criar uma conta
+          </Link>
+        </p>
+      </section>
+    );
+  }
 
   return (
     <section className="auth-page">
