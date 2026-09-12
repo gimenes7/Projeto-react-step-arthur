@@ -1,6 +1,6 @@
-import ButtonModules from "./components/ButtonModules";
-import ButtonTailwind from "./components/ButtonTailwind";
-import ButtonMUI from "./components/ButtonMUI";
+import ButtonModules from "./components/aula7/ButtonModules";
+import ButtonTailwind from "./components/aula7/ButtonTailwind";
+import ButtonMUI from "./components/aula7/ButtonMUI";
 
 function App() {
   return (
