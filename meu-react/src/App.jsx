@@ -1,6 +1,6 @@
-import ButtonCSS from "./components/ButtonCSS.jsx";
-import ButtonInline from "./components/ButtonInline.jsx";
-import ButtonStyled from "./components/ButtonStyled.jsx";
+import ButtonCSS from "./components/aula6/ButtonCSS.jsx";
+import ButtonInline from "./components/aula6/ButtonInline.jsx";
+import ButtonStyled from "./components/aula6/ButtonStyled.jsx";
 
 function App() {
   return (
