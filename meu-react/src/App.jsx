@@ -1,6 +1,6 @@
-import Usuarios from "./components/Usuarios";
-import Posts from "./components/Posts";
-import ListaUsuarios from "./components/ListaUsuarios";
+import Usuarios from "./components/aula8/Usuarios";
+import Posts from "./components/aula8/Posts";
+import ListaUsuarios from "./components/aula8/ListaUsuarios";
 function App() {
   return (
     <div>
