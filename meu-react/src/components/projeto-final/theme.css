@@ -1,0 +1,33 @@
+:root {
+  --bg: #ffffff;
+  --text-h: #1a1a1a;
+  --text: #4a4a4a;
+  --border: #e2e2e2;
+  --accent: #6d28d9;
+  --accent-bg: rgba(109, 40, 217, 0.12);
+  --accent-border: rgba(109, 40, 217, 0.35);
+}
+
+[data-theme="dark"] {
+  --bg: #14141a;
+  --text-h: #f5f5f7;
+  --text: #c7c7cf;
+  --border: #2c2c35;
+  --accent: #a78bfa;
+  --accent-bg: rgba(167, 139, 250, 0.16);
+  --accent-border: rgba(167, 139, 250, 0.4);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition:
+    background 0.2s,
+    color 0.2s;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
